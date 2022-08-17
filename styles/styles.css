@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e4e6ec;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  background-color: #ccc;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #999;
+  border-top: 0;
+  /* overflow: auto; */
+}
+
+header {
+  background-color: #e0861e;
+  height: 70px;
+  border-bottom: 1px dotted #000;
+}
+
+header h1 {
+  font-size: 1.5em;
+  letter-spacing: 6px;
+  margin: 0;
+  line-height: 70px;
+  text-align: center; /* note CSS spelling of ‘center’ */
+}
+
+nav {
+  background-color: #bdcdbd;
+  width: 150px;
+  float: left;
+  font-size: 0.85em;
+  line-height: 2.5em;
+}
+nav a:link,
+nav a:visited {
+  display: block;
+  text-decoration: none;
+  padding-left: 5px;
+  color: #000;
+  border-bottom: 1px solid white;
+  transition: all 0.5s;
+}
+nav a:hover {
+  background: #fff;
+  border-right: 3px solid #999;
+}
+nav a.here {
+  background: #eee;
+  border-right: 3px solid #666;
+}
+main {
+  width: 490px;
+  padding: 1.75em 30px 2em; /* top, right-left, bottom */
+  background-color: #fff;
+  float: right;
+  font-size: 0.75em;
+  line-height: 1.85em;
+}
+main h2 {
+  font-size: 1.25em;
+  margin: 0;
+  border-bottom: 1px solid #666;
+}
+main figure {
+  float: right;
+  border: 1px solid #333;
+  padding: 0;
+  margin: 12px 0 0 10px; /* top, right, bottom, left */
+  border-radius: 12px;
+  overflow: hidden;
+}
+main figure img {
+  display: block;
+}
+main figure figcaption {
+  /*text-align: center;
+  padding: 2px 6px;*/
+}
+footer {
+  clear: both;
+  border-top: 1px dotted #333;
+  padding: 20px 30px; /* top-bottom, right-left */
+  background-color: #e0861e;
+}
+/*#container,
+header,
+main,
+nav,
+footer {
+  border: 2px solid #0f0;
+  box-sizing: border-box;
+}
+main {
+  width: 546px;
+}*/
