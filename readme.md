@@ -29,7 +29,7 @@ This is the website that’s created by following the handbook.
 
 https://www.quora.com/Who-are-some-of-the-best-female-classical-painters-in-history
 
-- a href="index.html" class="here">Painters</a>
-- a href="mary-cassatt.html">Mary Cassatt</a>
-- a href="bridget-riley.html">Bridget Riley</a>
-- a href="marie-denise-villers.html">Marie Denise Villers</a>GREAT PIC
+- riley.html">Riley
+- cassatt.html">Cassatt
+- basquiat.html">Basquiat
+- villers.html">Villers
