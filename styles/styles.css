@@ -7,18 +7,19 @@ body {
 
 #container {
   background-color: #ccc;
-  width: 700px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #999;
   border-top: 0;
-  /* overflow: auto; */
 }
 
 header {
   background-color: #e0861e;
   height: 70px;
   border-bottom: 1px dotted #000;
+  font-family: 'Potta One', cursive;
+  font-size: 2em;
 }
 
 header h1 {
@@ -29,12 +30,18 @@ header h1 {
   text-align: center; /* note CSS spelling of ‘center’ */
 }
 
+/* WRAP 'nav' (menu) AND 'main' boxes SIDE-BY-SIDE */
+.wrapper {
+  display: flex;
+}
+
+/* THE MENU */
 nav {
   background-color: #bdcdbd;
-  width: 150px;
-  float: left;
+  width: 25%;
   font-size: 0.85em;
   line-height: 2.5em;
+  box-sizing: border-box;
 }
 nav a:link,
 nav a:visited {
@@ -53,12 +60,13 @@ nav a.here {
   background: #eee;
   border-right: 3px solid #666;
 }
+
+/* MAIN CONTENT BOX */
 main {
-  width: 490px;
+  box-sizing: border-box;
+  width: 75%;
   padding: 1.75em 30px 2em; /* top, right-left, bottom */
   background-color: #fff;
-  float: right;
-  font-size: 0.75em;
   line-height: 1.85em;
 }
 main h2 {
@@ -66,28 +74,84 @@ main h2 {
   margin: 0;
   border-bottom: 1px solid #666;
 }
-main figure {
+
+figure {
   float: right;
   border: 1px solid #333;
   padding: 0;
-  margin: 12px 0 0 10px; /* top, right, bottom, left */
+  margin: 12px 0 0 10px;
   border-radius: 12px;
   overflow: hidden;
 }
-main figure img {
+figure img {
   display: block;
+  width: 100%;
 }
-main figure figcaption {
-  /*text-align: center;
-  padding: 2px 6px;*/
+/*
+figure figcaption {
+  text-align: center;
+  padding: 2px 6px;
 }
+*/
+
 footer {
   clear: both;
   border-top: 1px dotted #333;
   padding: 20px 30px; /* top-bottom, right-left */
   background-color: #e0861e;
 }
-/*#container,
+
+
+/* THE CSS "BREAK POINT" ACTIVATES HERE */
+@media all and (max-width: 600px) {
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    width: 100%;
+  }
+  nav a:link,
+  nav a:visited {
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    border-bottom: 0;
+  }
+  nav a:hover {
+    border-right: 0;
+  }
+  nav a.here {
+    background: #000;
+    border-right: 0;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  figure {
+    float: none;
+    /* top, right, bottom, left */
+    margin: 12px 0 0 0;
+  }
+  figure img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+}
+
+
+/* UNCOMMENT TO SHOW BOXES */
+/*
+.container,
 header,
 main,
 nav,
@@ -95,6 +159,4 @@ footer {
   border: 2px solid #0f0;
   box-sizing: border-box;
 }
-main {
-  width: 546px;
-}*/
+*/

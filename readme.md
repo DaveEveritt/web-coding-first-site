@@ -5,11 +5,16 @@ This is the website that’s created by following the handbook.
 ## To do/decide
 
 - [ ] rewrite as min-width
+- [ ] use color variables at top
+- [ ] make menu flex by default
 - [ ] add female/black artists
+- [ ] use header not h2 to style header section
 - [ ] use index page for image thumbs flexbox
 - [ ] replace 'here' class with page-specific class
 - [ ] use figcaption under image
 - [ ] size figure tag width and CSS img width: 100%
+- [ ] put all "box-sizing: border-box;" tags in one CSS rule
+- [ ] don't over-specify ("figure" not "main figure") until needed
 
 ## Done/decided
 
@@ -21,6 +26,7 @@ This is the website that’s created by following the handbook.
 
 - [ ] meta viewport mobile code in head
 - [ ] flexbox
+- [ ] font-family Google font
 - [ ] explain figure tag with 100% img
 
 ---
