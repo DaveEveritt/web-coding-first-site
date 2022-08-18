@@ -1,6 +1,6 @@
 # Website created with Web Coding First Steps
 
-This is the website that’s created by following the handbook.
+This is the website created by following the handbook—you can see the [finished site here](https://daveeveritt.github.io/web-coding-first-site/).
 
 ## To do/decide
 
