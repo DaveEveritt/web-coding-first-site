@@ -87,12 +87,13 @@ figure img {
   display: block;
   width: 100%;
 }
-/*
-figure figcaption {
+
+figcaption {
   text-align: center;
+  background-color: #bdcdbd;
   padding: 2px 6px;
 }
-*/
+
 
 footer {
   clear: both;
