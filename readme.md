@@ -8,7 +8,7 @@ This is the website created by following the handbook—you can see the [finishe
 - [ ] use color variables at top
 - [ ] make menu flex by default
 - [ ] refine mobile menu
-- [ ] add female/black artists
+- [ ] add female/black artist images/links
 - [ ] use header not h2 to style header section
 - [ ] use index page for image thumbs flexbox
 - [ ] replace 'here' class with page-specific class

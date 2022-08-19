@@ -66,6 +66,7 @@ nav a.here {
 main {
   box-sizing: border-box;
   width: 75%;
+  min-height: 75vh;
   padding: 1.75em 30px 2em; /* top, right-left, bottom */
   background-color: #fff;
   line-height: 1.85em;
@@ -83,7 +84,7 @@ main h2 {
 }
 .homepage figure {
   float: none;
-  width: 200px;
+  width: 120px;
 }
 
 figure {
