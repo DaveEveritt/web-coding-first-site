@@ -30,7 +30,10 @@ header h1 {
   line-height: 70px;
   text-align: center; /* note CSS spelling of ‘center’ */
 }
-
+h1 a {
+  /* fixes the "default blue" link */
+  color: #000;
+}
 /* WRAP 'nav' (menu) AND 'main' boxes SIDE-BY-SIDE */
 .wrapper {
   display: flex;
