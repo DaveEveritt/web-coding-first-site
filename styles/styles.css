@@ -26,9 +26,10 @@ h1 a {
   color: #000;
   /* removes the link "default underline" */
   text-decoration: none;
+  transition: all .5s;
 }
 h1 a:hover {
-  color: #333;
+  color: #666;
 }
 
 /* Wraps 'nav' (menu), 'main' (content) side-by-side: */
@@ -126,7 +127,7 @@ footer {
   }
 
   header h1 {
-    font-size: 1em;
+    font-size: .75em;
     letter-spacing: 1px;
   }
 
