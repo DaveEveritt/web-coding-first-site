@@ -80,6 +80,7 @@ main h2 {
   border-bottom: 1px solid #666;
 }
 
+/* lay out the gallery: */
 .homepage {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +90,7 @@ main h2 {
   width: 120px;
 }
 
+/* images on individual artist's pages */
 figure {
   float: right;
   border: 1px solid #333;
