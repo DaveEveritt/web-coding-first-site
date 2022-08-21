@@ -152,6 +152,11 @@ footer {
     width: 100%;
   }
 
+  .homepage figure {
+    /* top, right, bottom, left */
+    margin: 12px 6px 6px 6px;
+  }
+
   figure {
     float: none;
     /* top, right, bottom, left */
@@ -161,10 +166,6 @@ footer {
     object-fit: cover;
     object-position: center;
   }
-
-  /* .homepage {
-    flex-direction: column;
-  } */
 
 }
 
