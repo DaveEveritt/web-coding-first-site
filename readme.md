@@ -4,6 +4,7 @@ This is the website created by following the handbook—you can see the [finishe
 
 ## To do/decide
 
+- [ ] set a tags to inherit color to fix defaults
 - [ ] rewrite as min-width
 - [ ] use color variables at top
 - [ ] make menu flex by default
