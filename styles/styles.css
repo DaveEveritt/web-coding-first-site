@@ -1,40 +1,37 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #e4e6ec;
+  /* extends the colour of the footer to the page bottom */
+  background-color: #e0861e;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  box-sizing: border-box;
-  background-color: #ccc;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #999;
-  border-top: 0;
-}
-
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5em;
   background-color: #e0861e;
-  height: 70px;
-  border-bottom: 1px dotted #000;
   font-family: 'Potta One', cursive;
   font-size: 2em;
 }
-
 header h1 {
+  margin: 0;
+  color: #333;
   font-size: 1.5em;
   letter-spacing: 6px;
-  margin: 0;
-  line-height: 70px;
-  text-align: center; /* note CSS spelling of ‘center’ */
 }
 h1 a {
   /* fixes the "default blue" link */
   color: #000;
+  /* removes the link "default underline" */
+  text-decoration: none;
 }
-/* WRAP 'nav' (menu) AND 'main' boxes SIDE-BY-SIDE */
+h1 a:hover {
+  color: #333;
+}
+
+/* Wraps 'nav' (menu), 'main' (content) side-by-side: */
 .wrapper {
   display: flex;
 }
@@ -57,7 +54,7 @@ nav a:visited {
   transition: all 0.5s;
 }
 nav a:hover {
-  background: #fff;
+  background: #eee;
   border-right: 3px solid #999;
 }
 nav a.here {
@@ -69,6 +66,7 @@ nav a.here {
 main {
   box-sizing: border-box;
   width: 75%;
+  /* set "view height" if there's not much content: */
   min-height: 75vh;
   padding: 1.75em 30px 2em; /* top, right-left, bottom */
   background-color: #fff;
@@ -80,10 +78,11 @@ main h2 {
   border-bottom: 1px solid #666;
 }
 
-/* lay out the gallery: */
+/* images on the homepage: */
 .homepage {
   display: flex;
   flex-wrap: wrap;
+  /* note CSS spelling of ‘center’: */
   justify-content: center;
 }
 .homepage figure {
@@ -112,40 +111,42 @@ figcaption {
 
 footer {
   clear: both;
-  border-top: 1px dotted #333;
-  padding: 20px 30px; /* top-bottom, right-left */
+  /* top-bottom, right-left */
+  padding: 20px 30px;
   background-color: #e0861e;
 }
 
 
-/* THE CSS "BREAK POINT" ACTIVATES HERE */
+/* THE "BREAKPOINT" ACTIVATES HERE */
 @media all and (max-width: 600px) {
 
   .wrapper {
     flex-direction: column;
   }
 
+  header h1 {
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+
   nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    background-color: black;
     width: 100%;
+    justify-content: space-around;
+    line-height: 2em;
   }
   nav a:link,
   nav a:visited {
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    color: #fff;
-    border-bottom: 0;
+    border: 0;
+    border-right: 1px solid white;
   }
-  nav a:hover {
-    border-right: 0;
-  }
-  nav a.here {
-    background: #000;
-    border-right: 0;
+  /* removes the right border on the last menu item: */
+  nav a:last-child {
+    border: 0;
   }
 
   main {
@@ -153,31 +154,28 @@ footer {
   }
 
   .homepage figure {
-    /* top, right, bottom, left */
-    margin: 12px 6px 6px 6px;
+    /* top, right-left, bottom */
+    margin: 12px 6px 6px;
   }
 
   figure {
     float: none;
-    /* top, right, bottom, left */
-    margin: 12px 0 0 0;
-  }
-  figure img {
-    object-fit: cover;
-    object-position: center;
+    /* top, right-left, bottom */
+    margin: 12px 0 0;
   }
 
-}
+} /* END OF THE "BREAKPOINT" - */
+  /* DO NOT delete this bracket! */
 
 
 /* UNCOMMENT TO SHOW BOXES */
-/*
-.container,
+/* 
+.wrapper,
 header,
 main,
 nav,
 footer {
-  border: 2px solid #0f0;
+  border: 2px solid #f00;
   box-sizing: border-box;
 }
-*/
+ */
