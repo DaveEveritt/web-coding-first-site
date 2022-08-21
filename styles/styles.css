@@ -86,7 +86,6 @@ main h2 {
   justify-content: center;
 }
 .homepage figure {
-  float: none;
   width: 120px;
 }
 
@@ -106,6 +105,7 @@ figcaption {
   text-align: center;
   background-color: #eee;
   padding: 2px 6px;
+  font-size: .75em;
 }
 
 footer {
