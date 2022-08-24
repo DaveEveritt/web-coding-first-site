@@ -4,21 +4,21 @@ This is the website created by following the handbook—you can see the [finishe
 
 ## To do/decide
 
-- [ ] set a tags to inherit color to fix defaults
 - [ ] rewrite as min-width
-- [ ] use color variables at top
 - [ ] make menu flex by default
-- [ ] refine mobile menu
-- [ ] add female/black artist images/links
-- [ ] use header not h2 to style header section
-- [ ] use index page for image thumbs flexbox
-- [ ] replace 'here' class with page-specific class
-- [ ] use figcaption under image
 - [ ] put all "box-sizing: border-box;" tags in one CSS rule
-- [ ] don't over-specify ("figure" not "main figure") until needed
+- [ ] use color variables at top
+- [ ] replace 'here' class with page-specific class
 
 ## Done/decided
 
+- [x] use header not h2 to style header section
+- [x] don't over-specify ("figure" not "main figure") until needed
+- [x] use figcaption under image
+- [x] use index page for image thumbs flexbox
+- [x] add female/black artist images/links
+- [x] refine mobile menu
+- [x] set a tags to inherit color to fix defaults
 - [x] size figure tag width and CSS img width: 100%
 - [x] decide min/max width (min)
 - [x] limit max width of whole layout (no)
