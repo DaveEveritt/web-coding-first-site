@@ -9,6 +9,7 @@ This is the website created by following the handbook—you can see the [finishe
 - [ ] put all "box-sizing: border-box;" tags in one CSS rule
 - [ ] use color variables at top
 - [ ] replace 'here' class with page-specific class
+- [ ] add a simple favicon?
 
 ## Done/decided
 
