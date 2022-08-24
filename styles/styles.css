@@ -5,6 +5,10 @@ body {
   background-color: #e0861e;
   font-family: Arial, Helvetica, sans-serif;
 }
+a {
+  /* replaces the "default blue" with the parent color: */
+  color: inherit;
+}
 
 header {
   display: flex;
@@ -22,8 +26,6 @@ header h1 {
   letter-spacing: 6px;
 }
 h1 a {
-  /* fixes the "default blue" link */
-  color: #000;
   /* removes the link "default underline" */
   text-decoration: none;
   transition: all .5s;
@@ -51,7 +53,6 @@ nav a:visited {
   display: block;
   text-decoration: none;
   padding-left: 5px;
-  color: #000;
   border-bottom: 1px solid white;
   transition: all 0.5s;
 }
@@ -168,6 +169,7 @@ footer {
 } /* END OF THE "BREAKPOINT" - */
   /* DO NOT delete this bracket! */
 
+/* ----------------------------------------------------- */
 
 /* UNCOMMENT TO SHOW BOXES */
 /* 
