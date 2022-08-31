@@ -5,22 +5,21 @@ This is the website created by following the handbook—you can see the [finishe
 ## To do/decide
 
 - [ ] use color variables at top
-- [ ] replace 'here' class with page-specific class
 - [ ] add a simple favicon?
 
 ## Done/decided
 
-- [x] make menu flex by default
 - [x] rewrite as min-width
-- [x] use header not h2 to style header section
-- [x] don't over-specify ("figure" not "main figure") until needed
-- [x] use figcaption under image
 - [x] use index page for image thumbs flexbox
 - [x] add female/black artist images/links
+- [x] make menu flex by default
 - [x] refine mobile menu
-- [x] set a tags to inherit color to fix defaults
-- [x] size figure tag width and CSS img width: 100%
-- [x] decide min/max width (min)
+- [x] use figcaption under image
+- [x] use header not h2 to style header section
+- [x] don't over-specify unless needed ("figure" not "main figure")
+- [x] fix default link colors by setting a tag color to "inherit"
+- [x] size figure tag width and make CSS img width: 100%
+- [x] replace 'here' class with page-specific class (no)
 - [x] limit max width of whole layout (no)
 - [x] add font locally (no)
 
@@ -28,5 +27,6 @@ This is the website created by following the handbook—you can see the [finishe
 
 - [ ] meta viewport mobile code in head
 - [ ] flexbox
+- [ ] image sizing (all same)
 - [ ] font-family Google font
 - [ ] explain figure tag with 100% img
