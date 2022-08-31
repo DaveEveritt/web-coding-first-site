@@ -173,6 +173,14 @@ footer {
     text-align: left;
   }
 
+  /* enlarges the figure tag on hover: */
+  .homepage figure {
+    transition: scale .5s;
+  }
+  .homepage figure:hover {
+    scale: 105%;
+  }
+
   /* images on individual artist's pages */
   figure {
     float: right;
