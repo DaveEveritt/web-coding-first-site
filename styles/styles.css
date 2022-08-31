@@ -1,3 +1,5 @@
+/* GENERAL AND MOBILE SIZE STYLES */
+
 body {
   margin: 0;
   padding: 0;
@@ -114,7 +116,7 @@ footer {
 }
 
 
-/* THE "BREAKPOINT" FOR STYLES ABOVE MOBILE WIDTH (600 pixels): */
+/* ABOVE MOBILE STYLES "BREAKPOINT" FOR WIDTHS ABOVE 600 pixels: */
 @media all and (min-width: 600px) {
 
   /* puts 'nav' (menu), 'main' (content) side-by-side: */
