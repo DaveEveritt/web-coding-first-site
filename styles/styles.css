@@ -1,12 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  /* extends the colour of the footer to the page bottom */
+  /* matches the footer colour to the page bottom: */
   background-color: #e0861e;
   font-family: Arial, Helvetica, sans-serif;
 }
 a {
-  /* replaces the "default blue" with the parent color: */
+  /* replaces the "default blue" links with parent color: */
   color: inherit;
 }
 
@@ -20,68 +20,62 @@ header {
   font-size: 2em;
 }
 header h1 {
-  margin: 0;
   color: #333;
-  font-size: 1.5em;
-  letter-spacing: 6px;
+  font-size: .8em;
+  letter-spacing: 1px;
 }
 h1 a {
-  /* removes the link "default underline" */
+  /* removes default link underline: */
   text-decoration: none;
-  transition: all .5s;
-}
-h1 a:hover {
-  color: #666;
 }
 
-/* Wraps 'nav' (menu), 'main' (content) side-by-side: */
+/* puts 'nav' (menu), 'main' (content) in a column: */
 .wrapper {
   display: flex;
+  flex-direction: column;
 }
+
 
 /* THE MENU */
 nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  line-height: 1.25em;
   background-color: #bdcdbd;
-  width: 25%;
-  font-size: 1em;
-  /* fills height of links on a single line: */
-  line-height: 2.5em;
-  box-sizing: border-box;
 }
 nav a:link,
 nav a:visited {
-  display: block;
+  padding: 6px 4px;
+  text-align: center;
+  border-right: 1px solid white;
   text-decoration: none;
-  padding-left: 5px;
-  border-bottom: 1px solid white;
-  transition: all 0.5s;
 }
-nav a:hover {
-  background: #eee;
-  border-right: 3px solid #999;
+/* removes the right border on the last menu item: */
+nav a:last-child {
+  border: 0;
 }
+/* highlights current page in menu: */
 nav a.here {
   background: #eee;
-  border-right: 3px solid #666;
 }
 
-/* MAIN CONTENT BOX */
+
+/* MAIN CONTENT BOX - FILLS MOBILE WIDTH */
 main {
-  box-sizing: border-box;
-  width: 75%;
-  /* set "view height" if there's not much content: */
-  min-height: 75vh;
-  padding: 1.75em 30px 2em; /* top, right-left, bottom */
+  /* sets padding: top, right+left, bottom: */
+  padding: 1.75em 30px 2em;
   background-color: #fff;
   line-height: 1.85em;
 }
+
 main h2 {
   font-size: 1.25em;
   margin: 0;
   border-bottom: 1px solid #666;
 }
 
-/* images on the homepage: */
+/* makes images on the homepage into a grid: */
 .homepage {
   display: flex;
   flex-wrap: wrap;
@@ -90,14 +84,14 @@ main h2 {
 }
 .homepage figure {
   width: 120px;
+  margin: 12px 6px 6px;
 }
 
 /* images on individual artist's pages */
 figure {
-  float: right;
   border: 1px solid #333;
   padding: 0;
-  margin: 12px 0 0 10px;
+  margin: 12px 0 0;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -114,65 +108,81 @@ figcaption {
 
 footer {
   clear: both;
-  /* top-bottom, right-left */
+  /* sets padding top-bottom, right-left: */
   padding: 20px 30px;
   background-color: #e0861e;
 }
 
 
-/* THE "BREAKPOINT" ACTIVATES HERE */
-@media all and (max-width: 600px) {
+/* THE "BREAKPOINT" FOR STYLES ABOVE MOBILE WIDTH (600 pixels): */
+@media all and (min-width: 600px) {
 
+  /* puts 'nav' (menu), 'main' (content) side-by-side: */
   .wrapper {
-    flex-direction: column;
+      flex-direction: row;
   }
 
   header h1 {
-    font-size: .75em;
-    letter-spacing: 1px;
+    font-size: 1.5em;
+    letter-spacing: 6px;
+  }
+  h1 a {
+    /* fades hover color change in/out: */
+    transition: all .75s;
+  }
+  /* hover works above mobile sizes only: */
+  h1 a:hover {
+    color: #000;
   }
 
+  /* NAV - FILLS 25% OF WIDTH */
   nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    line-height: 1.25em;
+    width: 25%;
+    flex-direction: column;
+    /* font-size: 1.25em; */
+    /* fills height of links on a single line: */
+    line-height: 2.5em;
   }
   nav a:link,
   nav a:visited {
-    padding: 6px;
-    text-align: center;
-    border: 0;
-    border-right: 1px solid white;
+    text-decoration: none;
+    text-align: left;
+    padding-left: 12px;
+    border-right: 0;
+    border-bottom: 1px solid white;
+    transition: all 0.75s;
   }
-  /* removes the right border on the last menu item: */
-  nav a:last-child {
-    border: 0;
+  nav a:hover {
+    background: #eee;
+    border-right: 3px solid #999;
+  }
+  nav a.here {
+    border-right: 3px solid #666;
   }
 
+  /* MAIN CONTENT BOX - FILLS REMAINING WIDTH */
   main {
-    width: 100%;
+    width: 75%;
+    /* contains padding inside the 75% width: */
+    box-sizing: border-box;
+    /* sets minimum "view height" if not much content: */
+    min-height: 72vh;
   }
 
-  .homepage figure {
-    /* top, right-left, bottom */
-    margin: 12px 6px 6px;
-  }
-
+  /* images on individual artist's pages */
   figure {
-    float: none;
-    /* top, right-left, bottom */
-    margin: 12px 0 0;
+    float: right;
+    margin: 12px 0 0 10px;
   }
 
-} /* END OF THE "BREAKPOINT" - */
-  /* DO NOT delete this bracket! */
+}
+/* THIS BRACKET ENDS THE "BREAKPOINT"
+ - DO NOT DELETE IT! */
 
-/* ----------------------------------------------------- */
 
-/* UNCOMMENT TO SHOW BOXES */
-/* 
+/* ---------- UNCOMMENT BELOW TO SHOW BOXES ---------- */
+
+/*
 .wrapper,
 header,
 main,
@@ -181,4 +191,4 @@ footer {
   border: 2px solid #f00;
   box-sizing: border-box;
 }
- */
+*/

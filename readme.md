@@ -4,15 +4,14 @@ This is the website created by following the handbook—you can see the [finishe
 
 ## To do/decide
 
-- [ ] rewrite as min-width
-- [ ] make menu flex by default
-- [ ] put all "box-sizing: border-box;" tags in one CSS rule
 - [ ] use color variables at top
 - [ ] replace 'here' class with page-specific class
 - [ ] add a simple favicon?
 
 ## Done/decided
 
+- [x] make menu flex by default
+- [x] rewrite as min-width
 - [x] use header not h2 to style header section
 - [x] don't over-specify ("figure" not "main figure") until needed
 - [x] use figcaption under image
@@ -31,14 +30,3 @@ This is the website created by following the handbook—you can see the [finishe
 - [ ] flexbox
 - [ ] font-family Google font
 - [ ] explain figure tag with 100% img
-
----
-
-## More women artists/index page
-
-https://www.quora.com/Who-are-some-of-the-best-female-classical-painters-in-history
-
-- riley.html">Riley
-- cassatt.html">Cassatt
-- basquiat.html">Basquiat
-- villers.html">Villers
