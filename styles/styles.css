@@ -1,10 +1,19 @@
 /* GENERAL AND MOBILE SIZE STYLES */
 
+/* Colours used more than once: */
+:root {
+  --color1: #e0861e;
+  --color2: #9a9;
+  --color3: #bdcdbd;
+  --color4: #efe;
+  --color5: #fff;
+}
+
 body {
   margin: 0;
   padding: 0;
   /* matches the footer colour to the page bottom: */
-  background-color: #e0861e;
+  background-color: var(--color1);
   font-family: Arial, Helvetica, sans-serif;
 }
 a {
@@ -17,12 +26,11 @@ header {
   justify-content: center;
   align-items: center;
   height: 2.5em;
-  background-color: #e0861e;
+  background-color: var(--color1);
   font-family: 'Potta One', cursive;
   font-size: 2em;
 }
 header h1 {
-  color: #333;
   font-size: .8em;
   letter-spacing: 1px;
 }
@@ -44,13 +52,13 @@ nav {
   flex-direction: row;
   width: 100%;
   line-height: 1.25em;
-  background-color: #bdcdbd;
+  background-color: var(--color3);
 }
 nav a:link,
 nav a:visited {
   padding: 6px 4px;
   text-align: center;
-  border-right: 1px solid white;
+  border-right: 1px solid var(--color5);
   text-decoration: none;
 }
 /* removes the right border on the last menu item: */
@@ -59,7 +67,7 @@ nav a:last-child {
 }
 /* highlights current page in menu: */
 nav a.here {
-  background: #eee;
+  background: var(--color4);
 }
 
 
@@ -67,14 +75,14 @@ nav a.here {
 main {
   /* sets padding: top, right+left, bottom: */
   padding: 1.75em 30px 2em;
-  background-color: #fff;
+  background-color: var(--color5);
   line-height: 1.85em;
 }
 main h2 {
   font-size: 1.25em;
   text-align: center;
   margin: 0;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid var(--color2);
 }
 
 /* makes images on the homepage into a grid: */
@@ -91,11 +99,12 @@ main h2 {
 
 /* images on individual artist's pages */
 figure {
-  border: 1px solid #333;
+  border: 1px solid var(--color2);
   padding: 0;
   margin: 12px 0 0;
   border-radius: 12px;
   overflow: hidden;
+  background-color: var(--color3);
 }
 figure img {
   display: block;
@@ -103,7 +112,7 @@ figure img {
 }
 figcaption {
   text-align: center;
-  background-color: #eee;
+  /* background-color: var(--color3); */
   padding: 2px 6px;
   font-size: .75em;
 }
@@ -112,7 +121,7 @@ footer {
   clear: both;
   /* sets padding top-bottom, right-left: */
   padding: 20px 30px;
-  background-color: #e0861e;
+  background-color: var(--color1);
 }
 
 
@@ -128,13 +137,9 @@ footer {
     font-size: 1.5em;
     letter-spacing: 6px;
   }
-  h1 a {
-    /* fades hover color change in/out: */
-    transition: all .75s;
-  }
   /* hover works above mobile sizes only: */
   h1 a:hover {
-    color: #000;
+    text-decoration: underline;
   }
 
   /* NAV - FILLS 25% OF WIDTH */
@@ -150,15 +155,15 @@ footer {
     text-align: left;
     padding-left: 12px;
     border-right: 0;
-    border-bottom: 1px solid white;
-    transition: all 0.75s;
+    border-bottom: 1px solid var(--color5);
+    transition: background 0.75s;
   }
   nav a:hover {
-    background: #eee;
-    border-right: 3px solid #999;
+    background: var(--color4);
+    border-right: 3px solid var(--color2);
   }
   nav a.here {
-    border-right: 3px solid #666;
+    border-right: 3px solid var(--color2);
   }
 
   /* MAIN CONTENT BOX - FILLS REMAINING WIDTH */
@@ -173,12 +178,14 @@ footer {
     text-align: left;
   }
 
-  /* enlarges the figure tag on hover: */
+  /* changes background and enlarges figure tag on hover: */
   .homepage figure {
-    transition: scale .5s;
+    transition-property: scale, background;
+    transition-duration: .5s;
   }
   .homepage figure:hover {
     scale: 105%;
+    background: var(--color4);
   }
 
   /* images on individual artist's pages */
