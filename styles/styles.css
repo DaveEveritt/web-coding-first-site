@@ -112,15 +112,9 @@ figure img {
 }
 figcaption {
   text-align: center;
+  /* sets padding top-bottom, right-left: */
   padding: 2px 6px;
   font-size: .75em;
-}
-
-footer {
-  clear: both;
-  /* sets padding top-bottom, right-left: */
-  padding: 20px 30px;
-  background-color: var(--color1);
 }
 
 
@@ -200,7 +194,6 @@ footer {
 
 
 /* ---------- UNCOMMENT BELOW TO SHOW BOXES ---------- */
-
 /*
 .wrapper,
 header,
@@ -209,5 +202,14 @@ nav,
 footer {
   border: 2px solid red;
   box-sizing: border-box;
+}
+*/
+
+/* -------- UNCOMMENT AND ADD HTML FOOTER TAG -------- */
+/* 
+footer {
+  clear: both;
+  padding: 20px 30px;
+  background-color: var(--color1);
 }
 */
