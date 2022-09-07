@@ -2,13 +2,15 @@
 
 This is the website created by following the handbook—you can see the [finished site here](https://daveeveritt.github.io/web-coding-first-site/).
 
-## To do/decide
+## To do
 
-- [ ] use color variables at top
-- [ ] add a simple favicon?
+- [x] run through previous tutorial and update
 
 ## Done/decided
 
+- [x] remove footer
+- [x] use color variables at top
+- [x] add a simple favicon (no)
 - [x] rewrite as min-width
 - [x] use index page for image thumbs flexbox
 - [x] add female/black artist images/links
