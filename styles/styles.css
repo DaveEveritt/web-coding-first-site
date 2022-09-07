@@ -1,18 +1,16 @@
 /* GENERAL AND MOBILE SIZE STYLES */
 
-/* Colours used more than once: */
+/* Sets olours used throughout the site: */
 :root {
   --color1: #e0861e;
   --color2: #9a9;
   --color3: #bdcdbd;
   --color4: #efe;
-  --color5: #fff;
 }
 
 body {
   margin: 0;
   padding: 0;
-  /* matches the footer colour to the page bottom: */
   background-color: var(--color1);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -27,7 +25,6 @@ header {
   justify-content: center;
   align-items: center;
   height: 2.5em;
-  background-color: var(--color1);
   font-family: 'Potta One', cursive;
   font-size: 2em;
 }
@@ -58,7 +55,7 @@ nav a:link,
 nav a:visited {
   padding: 6px 4px;
   text-align: center;
-  border-right: 1px solid var(--color5);
+  border-right: 1px solid var(--color4);
   text-decoration: none;
 }
 /* removes the right border on the last menu item: */
@@ -75,14 +72,14 @@ nav a.here {
 main {
   /* sets padding: top, right+left, bottom: */
   padding: 1.75em 30px 2em;
-  background-color: var(--color5);
+  background-color: var(--color4);
   line-height: 1.85em;
 }
 main h2 {
   font-size: 1.25em;
   text-align: center;
   margin: 0;
-  border-bottom: 1px solid var(--color2);
+  border-bottom: 2px solid var(--color3);
 }
 
 /* makes images on the homepage into a grid: */
@@ -148,15 +145,12 @@ figcaption {
     text-align: left;
     padding-left: 12px;
     border-right: 0;
-    border-bottom: 1px solid var(--color5);
+    border-bottom: 2px solid var(--color4);
     transition: background 0.75s;
   }
   nav a:hover {
     background: var(--color4);
-    border-right: 3px solid var(--color2);
-  }
-  nav a.here {
-    border-right: 3px solid var(--color2);
+    border-right: 4px solid var(--color2);
   }
 
   /* MAIN CONTENT BOX - FILLS REMAINING WIDTH */
