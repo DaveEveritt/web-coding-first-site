@@ -9,8 +9,9 @@ This is the website created by following the handbook—you can see the [finishe
 ## Done/decided
 
 - [x] remove footer
+- [x] removed border on nav a:here
+- [x] replace white with pale colour for main background
 - [x] use color variables at top
-- [x] add a simple favicon (no)
 - [x] rewrite as min-width
 - [x] use index page for image thumbs flexbox
 - [x] add female/black artist images/links
