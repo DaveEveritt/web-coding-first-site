@@ -150,8 +150,12 @@ figcaption {
   }
   nav a:hover {
     background: var(--color4);
-    border-right: 4px solid var(--color2);
+    border-right: 2px solid var(--color2);
   }
+  nav a.here:hover {
+    border-right: none;
+  }
+  
 
   /* MAIN CONTENT BOX - FILLS REMAINING WIDTH */
   main {
