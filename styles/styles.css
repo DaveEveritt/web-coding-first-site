@@ -24,14 +24,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.5em;
   font-family: 'Potta One', cursive;
-  font-size: 2em;
 }
 header h1 {
-  font-size: .8em;
+  margin: 0;
+  font-size: 1.5em;
   letter-spacing: 1px;
+  padding-bottom: .25em;
 }
+
 h1 a {
   /* removes default link underline: */
   text-decoration: none;
@@ -47,10 +48,11 @@ h1 a {
 nav {
   display: flex;
   flex-direction: row;
-  width: 100%;
   line-height: 1.25em;
+  width: 100%;
   background-color: var(--color3);
 }
+
 nav a:link,
 nav a:visited {
   padding: 6px 4px;
@@ -115,7 +117,7 @@ figcaption {
 }
 
 
-/* ABOVE MOBILE STYLES "BREAKPOINT" FOR WIDTHS ABOVE 600 pixels: */
+/* STYLES "BREAKPOINT" FOR WIDTHS ABOVE 600 pixels: */
 @media all and (min-width: 600px) {
 
   /* puts 'nav' (menu), 'main' (content) side-by-side: */
@@ -124,7 +126,7 @@ figcaption {
   }
 
   header h1 {
-    font-size: 1.5em;
+    font-size: 3em;
     letter-spacing: 6px;
   }
   /* hover only works above mobile sizes: */
@@ -155,15 +157,15 @@ figcaption {
   nav a.here:hover {
     border-right: none;
   }
-  
+
 
   /* MAIN CONTENT BOX - FILLS REMAINING WIDTH */
   main {
     width: 75%;
-    /* contains padding inside the 75% width: */
-    box-sizing: border-box;
-    /* sets minimum "view height" if not much content: */
-    min-height: 72vh;
+        /* contains padding inside the 75% width: */
+        box-sizing: border-box;
+          /* sets minimum "view height" if not much content: */
+          min-height: 72vh;
   }
   main h2 {
     text-align: left;
@@ -204,7 +206,7 @@ footer {
 */
 
 /* -------- UNCOMMENT AND ADD HTML FOOTER TAG -------- */
-/* 
+/*
 footer {
   clear: both;
   padding: 20px 30px;
