@@ -143,7 +143,6 @@ figcaption {
   }
   nav a:link,
   nav a:visited {
-    text-decoration: none;
     text-align: left;
     padding-left: 12px;
     border-right: 0;
