@@ -69,7 +69,6 @@ nav a.here {
   background: var(--color4);
 }
 
-
 /* MAIN CONTENT BOX - FILLS MOBILE WIDTH */
 main {
   /* sets padding: top, right+left, bottom: */
@@ -138,7 +137,6 @@ figcaption {
   nav {
     width: 25%;
     flex-direction: column;
-    /* fills height of links on a single line: */
     line-height: 2.5em;
   }
   nav a:link,
@@ -157,14 +155,13 @@ figcaption {
     border-right: none;
   }
 
-
   /* MAIN CONTENT BOX - FILLS REMAINING WIDTH */
   main {
     width: 75%;
-        /* contains padding inside the 75% width: */
-        box-sizing: border-box;
-          /* sets minimum "view height" if not much content: */
-          min-height: 72vh;
+    /* contains padding inside the 75% width: */
+    box-sizing: border-box;
+    /* sets minimum "view height" if not much content: */
+    min-height: 72vh;
   }
   main h2 {
     text-align: left;
