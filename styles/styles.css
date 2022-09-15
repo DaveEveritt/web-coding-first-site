@@ -128,7 +128,6 @@ figcaption {
     font-size: 3em;
     letter-spacing: 6px;
   }
-  /* hover only works above mobile sizes: */
   h1 a:hover {
     text-decoration: underline;
   }
