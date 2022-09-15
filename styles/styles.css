@@ -121,7 +121,7 @@ figcaption {
 
   /* puts 'nav' (menu), 'main' (content) side-by-side: */
   .wrapper {
-      flex-direction: row;
+    flex-direction: row;
   }
 
   header h1 {
