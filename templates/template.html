@@ -1,34 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-gb">
+
   <head>
     <meta charset="UTF-8">
-    <title>My website: page_title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists: artist_name</title>
+
+    <!-- your stylesheet -->
     <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Google fonts: -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <div id="container">
-      <header>
-        <h1>main_heading</h1>
-      </header>
-      <nav>
-        <a href="picasso.html">Picasso</a>
-        <a href="index.html" class="here">Van Gogh</a>
-        <a href="duchamp.html">Duchamp</a>
-        <a href="manray.html">Man Ray</a>
-        <a href="turner.html">Turner</a>
+      
+    <header>
+      <h1><a href="index.html">Artists</a>: artist_name</h1>
+    </header>
+    
+    <div class="wrapper">
+
+      <nav><!-- add "class="here" for this page -->
+        <a href="van-gogh.html">Van Gogh</a>
+        <a href="chen.html">Georgette Chen</a>
+        <a href="villiers.html">Marie Villiers</a>
+        <a href="cassatt.html">Mary Cassatt</a>
+        <a href="ofili.html">Chris Ofili</a>
+        <a href="vermeer.html">Johannes Vermeer</a>
       </nav>
+
       <main>
-        <h2>painting_title</h2>
+
+        <h2>Biography</h2>
 
         <figure>
-          <img src="images/" width="300" height="" alt="">
-          <!-- <figcaption>Sunflowers</figcaption> -->
+          <img src="images/van-gogh.jpg" alt="Van Gogh: self-portrait">
+          <figcaption>Self-portrait</figcaption>
         </figure>
 
-      </main><!-- end of the main tag -->
+        <p>
+          artist_description
+        </p>
 
-      <footer></footer>
+      </main>
 
-    </div><!-- end of the container div -->
+    </div><!-- end of the wrapper div -->
+
   </body>
 </html>
