@@ -1,86 +1,89 @@
+/* GENERAL AND MOBILE SIZE STYLES */
+
+/* Sets colours used throughout the site: */
+:root {
+  --color1: #e0861e;
+  --color2: #9a9;
+  --color3: #bdcdbd;
+  --color4: #efe;
+}
+
 body {
   margin: 0;
   padding: 0;
-  /* extends the colour of the footer to the page bottom */
-  background-color: #e0861e;
+  background-color: var(--color1);
   font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  /* replaces the "default blue" links with parent color: */
+  color: inherit;
 }
 
 header {
+  /* flex enables horizontal and vertical centering: */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.5em;
-  background-color: #e0861e;
   font-family: 'Potta One', cursive;
-  font-size: 2em;
 }
 header h1 {
   margin: 0;
-  color: #333;
   font-size: 1.5em;
-  letter-spacing: 6px;
-}
-h1 a {
-  /* fixes the "default blue" link */
-  color: #000;
-  /* removes the link "default underline" */
-  text-decoration: none;
-  transition: all .5s;
-}
-h1 a:hover {
-  color: #666;
+  letter-spacing: 1px;
+  padding-bottom: .25em;
 }
 
-/* Wraps 'nav' (menu), 'main' (content) side-by-side: */
+h1 a {
+  /* removes default link underline: */
+  text-decoration: none;
+}
+
+/* puts 'nav' (menu), 'main' (content) in a column: */
 .wrapper {
   display: flex;
+  flex-direction: column;
 }
 
 /* THE MENU */
 nav {
-  background-color: #bdcdbd;
-  width: 25%;
-  font-size: 1em;
-  /* fills height of links on a single line: */
-  line-height: 2.5em;
-  box-sizing: border-box;
-}
-nav a:link,
-nav a:visited {
-  display: block;
-  text-decoration: none;
-  padding-left: 5px;
-  color: #000;
-  border-bottom: 1px solid white;
-  transition: all 0.5s;
-}
-nav a:hover {
-  background: #eee;
-  border-right: 3px solid #999;
-}
-nav a.here {
-  background: #eee;
-  border-right: 3px solid #666;
+  display: flex;
+  flex-direction: row;
+  line-height: 1.25em;
+  width: 100%;
+  background-color: var(--color3);
 }
 
-/* MAIN CONTENT BOX */
+nav a:link,
+nav a:visited {
+  padding: 6px 4px;
+  text-align: center;
+  border-right: 1px solid var(--color4);
+  text-decoration: none;
+}
+/* removes the right border on the last menu item: */
+nav a:last-child {
+  border: 0;
+}
+/* highlights current page in menu: */
+nav a.here {
+  background: var(--color4);
+}
+
+/* MAIN CONTENT BOX - FILLS MOBILE WIDTH */
 main {
-  box-sizing: border-box;
-  width: 75%;
-  /* set "view height" if there's not much content: */
-  min-height: 75vh;
-  padding: 1.75em 30px 2em; /* top, right-left, bottom */
-  background-color: #fff;
+  /* sets padding: top, right+left, bottom: */
+  padding: 1.75em 30px 2em;
+  background-color: var(--color4);
   line-height: 1.85em;
 }
 main h2 {
   font-size: 1.25em;
+  text-align: center;
   margin: 0;
-  border-bottom: 1px solid #666;
+  border-bottom: 2px solid var(--color3);
 }
 
-/* images on the homepage: */
+/* makes images on the homepage into a grid: */
 .homepage {
   display: flex;
   flex-wrap: wrap;
@@ -89,16 +92,17 @@ main h2 {
 }
 .homepage figure {
   width: 120px;
+  margin: 12px 6px 6px;
 }
 
 /* images on individual artist's pages */
 figure {
-  float: right;
-  border: 1px solid #333;
+  border: 1px solid var(--color2);
   padding: 0;
-  margin: 12px 0 0 10px;
+  margin: 12px 0 0;
   border-radius: 12px;
   overflow: hidden;
+  background-color: var(--color3);
 }
 figure img {
   display: block;
@@ -106,77 +110,101 @@ figure img {
 }
 figcaption {
   text-align: center;
-  background-color: #eee;
+  /* sets padding top-bottom, right-left: */
   padding: 2px 6px;
   font-size: .75em;
 }
 
-footer {
-  clear: both;
-  /* top-bottom, right-left */
-  padding: 20px 30px;
-  background-color: #e0861e;
-}
 
+/* STYLES "BREAKPOINT" FOR WIDTHS ABOVE 600 pixels: */
+@media all and (min-width: 600px) {
 
-/* THE "BREAKPOINT" ACTIVATES HERE */
-@media all and (max-width: 600px) {
-
+  /* puts 'nav' (menu), 'main' (content) side-by-side: */
   .wrapper {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   header h1 {
-    font-size: .75em;
-    letter-spacing: 1px;
+    font-size: 3em;
+    letter-spacing: 6px;
+  }
+  h1 a:hover {
+    text-decoration: underline;
   }
 
+  /* NAV - FILLS 25% OF WIDTH */
   nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    line-height: 1.25em;
+    width: 25%;
+    flex-direction: column;
+    line-height: 2.5em;
   }
   nav a:link,
   nav a:visited {
-    padding: 6px;
-    text-align: center;
-    border: 0;
-    border-right: 1px solid white;
+    text-align: left;
+    padding-left: 12px;
+    border-right: 0;
+    border-bottom: 2px solid var(--color4);
+    transition: background 0.75s;
   }
-  /* removes the right border on the last menu item: */
-  nav a:last-child {
-    border: 0;
+  nav a:hover {
+    background: var(--color4);
+    border-right: 2px solid var(--color2);
+  }
+  nav a.here:hover {
+    border-right: none;
   }
 
+  /* MAIN CONTENT BOX - FILLS REMAINING WIDTH */
   main {
-    width: 100%;
+    width: 75%;
+    /* contains padding inside the 75% width: */
+    box-sizing: border-box;
+    /* sets minimum "view height" if not much content: */
+    min-height: 72vh;
+  }
+  main h2 {
+    text-align: left;
   }
 
+  /* changes background and enlarges figure tag on hover: */
   .homepage figure {
-    /* top, right-left, bottom */
-    margin: 12px 6px 6px;
+    transition-property: scale, background;
+    transition-duration: .5s;
+  }
+  .homepage figure:hover {
+    scale: 105%;
+    background: var(--color4);
   }
 
+  /* images on individual artist's pages */
   figure {
-    float: none;
-    /* top, right-left, bottom */
-    margin: 12px 0 0;
+    float: right;
+    /* top, right, bottom, left */
+    margin: 12px 0 0 10px;
   }
 
-} /* END OF THE "BREAKPOINT" - */
-  /* DO NOT delete this bracket! */
+}
+/* THE BRACKET ABOVE ENDS THE "BREAKPOINT"
+ - DO NOT DELETE IT! */
 
 
-/* UNCOMMENT TO SHOW BOXES */
-/* 
+/* ---------- UNCOMMENT BELOW TO SHOW BOXES ---------- */
+/*
 .wrapper,
 header,
 main,
 nav,
 footer {
-  border: 2px solid #f00;
+  border: 2px solid red;
   box-sizing: border-box;
 }
- */
+*/
+
+/* -------- UNCOMMENT AND ADD HTML FOOTER TAG -------- */
+/*
+footer {
+  clear: both;
+  padding: 20px 30px;
+  background-color: var(--color1);
+}
+*/
