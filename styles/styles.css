@@ -168,11 +168,10 @@ figcaption {
 
   /* changes background and enlarges figure tag on hover: */
   .homepage figure {
-    transition-property: scale, background;
-    transition-duration: .5s;
+    transition-property: transform, background; transition-duration: .5s;
   }
   .homepage figure:hover {
-    scale: 105%;
+    transform: scale(1.1);
     background: var(--color4);
   }
 
