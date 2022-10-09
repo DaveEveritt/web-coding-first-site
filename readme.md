@@ -4,10 +4,11 @@ This is the website created by following the handbook—you can see the [finishe
 
 ## To do
 
-- [x] run through previous tutorial and update
+- [ ] get feedback from students
 
 ## Done/decided
 
+- [x] run through previous tutorial and update
 - [x] remove footer
 - [x] removed border on nav a:here
 - [x] replace white with pale colour for main background
